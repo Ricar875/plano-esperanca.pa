@@ -68,4 +68,399 @@ section{padding:60px 20px}
 .pilar ul li{margin-bottom:5px}
 
 /* PLANOS */
-.planos{
+.planos{background:var(--branco);text-align:center}
+.grid-planos{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;max-width:1150px;margin:0 auto}
+.card{background:var(--branco);border:2px solid var(--verde-claro);border-radius:15px;padding:28px 20px;width:245px;box-shadow:0 4px 15px rgba(0,0,0,.06);display:flex;flex-direction:column;position:relative}
+.card::before{content:"";position:absolute;top:-10px;left:50%;transform:translateX(-50%);width:20px;height:20px;background:var(--verde-claro);border-radius:50%;border:3px solid #fff}
+.card.destaque{border-color:var(--laranja)}
+.card.destaque::before{background:var(--laranja)}
+.card h3{color:var(--verde-escuro);font-size:22px;margin-bottom:12px;text-transform:uppercase}
+.card.destaque h3{color:var(--laranja)}
+.preco{font-size:30px;font-weight:bold;color:var(--verde-escuro)}
+.preco small{font-size:14px;font-weight:normal}
+.taxa{font-size:13px;color:#666;margin-bottom:15px;padding-bottom:15px;border-bottom:1px solid #eee}
+.card ul{list-style:none;text-align:left;margin-bottom:20px;font-size:14px;flex-grow:1}
+.card ul li{margin-bottom:8px}
+.btn-contratar{background:var(--verde-claro);color:#fff;padding:12px;border:none;border-radius:30px;cursor:pointer;font-weight:bold;text-decoration:none;display:block;text-align:center;transition:.3s}
+.btn-contratar:hover{background:var(--verde-escuro)}
+.card.destaque .btn-contratar{background:var(--laranja)}
+.extras{max-width:800px;margin:35px auto 0;background:var(--creme);border-radius:15px;padding:20px;font-size:17px;color:var(--verde-escuro);font-weight:bold}
+
+/* CREMACAO */
+.cremacao{background:var(--verde-escuro);color:#fff;text-align:center}
+.cremacao .titulo h2{color:#fff}
+.grid-cremacao{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:1000px;margin:0 auto}
+.item-cremacao{background:rgba(255,255,255,.1);padding:25px;border-radius:15px;width:300px;border-top:4px solid var(--laranja);text-align:left}
+.item-cremacao h3{margin-bottom:12px;font-size:20px}
+
+/* ESTRUTURA */
+.estrutura{background:var(--branco)}
+.grid-estrutura{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:22px;justify-content:center}
+.sala{flex:1 1 320px;max-width:500px;background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.1)}
+.sala img{width:100%;height:280px;object-fit:cover;background:#ddd}
+.sala div{padding:18px}
+.sala h3{color:var(--verde-escuro)}
+.sala span{color:var(--laranja);font-weight:bold;font-size:14px}
+
+/* DEPOIMENTOS */
+.depoimentos{background:var(--creme)}
+.grid-dep{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.dep{background:#fff;border-radius:15px;padding:24px;box-shadow:0 4px 15px rgba(0,0,0,.07);border-left:5px solid var(--verde-claro);display:flex;flex-direction:column}
+.dep:nth-child(even){border-left-color:var(--laranja)}
+.estrelas{color:#FFB300;font-size:18px;margin-bottom:8px}
+.dep p{font-size:15px;font-style:italic;flex-grow:1;margin-bottom:14px}
+.dep .autor{display:flex;align-items:center;gap:10px}
+.dep .avatar{width:42px;height:42px;border-radius:50%;background:var(--verde-escuro);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold}
+.dep .autor strong{display:block;color:var(--verde-escuro);font-size:15px}
+.dep .autor span{font-size:12px;color:#777}
+
+/* FORMULARIO */
+.contato{background:linear-gradient(135deg,var(--verde-escuro),#2E7D32);color:#fff}
+.contato-grid{max-width:1000px;margin:0 auto;display:flex;flex-wrap:wrap;gap:35px;align-items:flex-start;justify-content:center}
+.contato-info{flex:1 1 300px}
+.contato-info h2{font-size:30px;margin-bottom:12px}
+.contato-info p{margin-bottom:12px}
+.contato-info .linha-c{background:rgba(255,255,255,.12);padding:12px 15px;border-radius:10px;margin-bottom:10px;font-size:15px}
+.contato-info a{color:#FFCC80;text-decoration:none;font-weight:bold}
+form{flex:1 1 360px;background:#fff;color:var(--texto);padding:28px;border-radius:18px;box-shadow:0 8px 25px rgba(0,0,0,.25)}
+form h3{color:var(--verde-escuro);margin-bottom:15px}
+label{display:block;font-size:13px;font-weight:bold;margin-bottom:4px;color:var(--verde-escuro)}
+input,select,textarea{width:100%;padding:12px;border:2px solid #ddd;border-radius:10px;font-size:15px;margin-bottom:14px;outline:none;transition:.2s}
+input:focus,select:focus,textarea:focus{border-color:var(--verde-claro)}
+form .btn-laranja{width:100%;font-size:17px}
+.aviso{font-size:12px;color:#777;text-align:center;margin-top:10px}
+
+/* RODAPE */
+footer{background:#222;color:#fff;padding:40px 20px;text-align:center;font-size:15px}
+footer p{margin-bottom:8px}
+footer a{color:#FFCC80;text-decoration:none}
+.logo-rodape{width:80px;height:80px;border-radius:50%;margin:0 auto 15px;background:#fff;border:3px solid var(--dourado);object-fit:cover}
+.copy{margin-top:18px;font-size:12px;color:#aaa}
+
+.whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;font-size:30px;text-decoration:none;box-shadow:0 4px 10px rgba(0,0,0,.35);z-index:1000;display:flex;align-items:center;justify-content:center}
+
+@media(max-width:600px){
+  .hero h1{font-size:28px}
+  .marca-hero{width:150px;height:150px}
+  nav a:not(.tel){display:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.jpeg" alt="Logo Memorial Esperança" onerror="this.style.display='none'">
+    <div>Plano <span style="color:#FFCC80">Esperança</span></div>
+  </div>
+  <nav>
+    <a href="#sobre">Quem Somos</a>
+    <a href="#planos">Planos</a>
+    <a href="#cremacao">Cremação</a>
+    <a href="#estrutura">Estrutura</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#contato">Contato</a>
+    <a class="tel" href="https://wa.me/5575999081877" target="_blank" rel="noopener">📞 (75) 99908-1877</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <img class="marca-hero" src="logo.jpeg" alt="Memorial Esperança Cemitério" onerror="this.style.display='none'">
+  <div class="selo">Plano de Assistência Funerária</div>
+  <h1>Venha Fazer Parte do Melhor Plano de Paulo Afonso e Região.</h1>
+  <p>Com você em todos os momentos. Plante hoje, colha tranquilidade amanhã!</p>
+  <a href="#planos" class="btn-laranja">CONHEÇA NOSSOS PLANOS</a>
+  <a href="#contato" class="btn-laranja btn-borda">SOLICITAR REPRESENTANTE</a>
+</section>
+
+<div class="faixa-laranja">Valores abaixo do mercado • Titular + 10 Dependentes</div>
+
+<!-- QUEM SOMOS -->
+<section class="sobre" id="sobre">
+  <div class="titulo">
+    <h2>Quem Somos</h2>
+    <div class="linha"></div>
+  </div>
+  <div class="sobre-grid">
+    <div class="sobre-img">
+      <img src="fachada.jpeg" alt="Fachada do Memorial Esperança Cemitério" onerror="this.src='logo.jpeg'">
+    </div>
+    <div class="sobre-txt">
+      <p>O <strong>Plano de Assistência Funerária Esperança</strong> nasceu para cuidar das famílias de Paulo Afonso e região nos momentos mais delicados, oferecendo segurança, respeito e acolhimento desde o primeiro contato.</p>
+      <p>Somos ligados ao <strong>Memorial Esperança Cemitério</strong>, o <strong>primeiro cemitério parque de Paulo Afonso-BA e região</strong>, com estrutura moderna, salas de velório confortáveis, serviços de tanatopraxia, formolização e cremação.</p>
+      <p>Nosso plano cobre o titular e até <strong>10 dependentes</strong>, com assistência 24 horas e valores abaixo do mercado, para que ninguém precise enfrentar a perda de alguém querido ainda se preocupando com as despesas.</p>
+      <div class="lema">“Com você em todos os momentos. Plante hoje, colha tranquilidade amanhã!”</div>
+    </div>
+  </div>
+
+  <div class="pilares">
+    <div class="pilar">
+      <div class="ico">🕊️</div>
+      <h3>Nosso Propósito</h3>
+      <p>Levar tranquilidade, amparo e dignidade às famílias, garantindo que cada despedida seja feita com respeito, cuidado e sem sobrecarga financeira.</p>
+    </div>
+    <div class="pilar">
+      <div class="ico">🎯</div>
+      <h3>Missão</h3>
+      <p>Oferecer assistência funerária completa, acessível e humanizada, com atendimento 24 horas e uma estrutura que honra a memória de quem partiu e conforta quem fica.</p>
+    </div>
+    <div class="pilar">
+      <div class="ico">🌱</div>
+      <h3>Visão e Valores</h3>
+      <p><strong>Visão:</strong> ser a referência em assistência funerária no Vale do São Francisco.</p>
+      <ul>
+        <li>✔ Respeito e empatia</li>
+        <li>✔ Transparência nos valores</li>
+        <li>✔ Compromisso 24 horas</li>
+        <li>✔ Cuidado com as famílias</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PLANOS -->
+<section class="planos" id="planos">
+  <div class="titulo">
+    <h2>Escolha o Plano Ideal</h2>
+    <p>Assistência 24h com a estrutura do 1º Cemitério Parque da região.</p>
+    <div class="linha"></div>
+  </div>
+
+  <div class="grid-planos">
+    <div class="card">
+      <h3>Simples</h3>
+      <div class="preco">R$ 35,00<small>/mês</small></div>
+      <div class="taxa">Taxa de Inscrição: R$ 35,00</div>
+      <ul>
+        <li>✅ <strong>400 KM</strong> Rodados</li>
+        <li>✅ Titular + 10 dependentes</li>
+        <li>✅ Assistência 24h</li>
+      </ul>
+      <a href="#contato" class="btn-contratar" onclick="escolherPlano('Simples')">Contratar</a>
+    </div>
+
+    <div class="card">
+      <h3>Básico</h3>
+      <div class="preco">R$ 45,00<small>/mês</small></div>
+      <div class="taxa">Taxa de Inscrição: R$ 45,00</div>
+      <ul>
+        <li>✅ <strong>700 KM</strong> Rodados</li>
+        <li>✅ Titular + 10 dependentes</li>
+        <li>✅ Assistência 24h</li>
+      </ul>
+      <a href="#contato" class="btn-contratar" onclick="escolherPlano('Básico')">Contratar</a>
+    </div>
+
+    <div class="card destaque">
+      <h3>Luxo</h3>
+      <div class="preco">R$ 70,00<small>/mês</small></div>
+      <div class="taxa">Taxa de Inscrição: R$ 70,00</div>
+      <ul>
+        <li>✅ <strong>1200 KM</strong> Rodados</li>
+        <li>✅ Titular + 10 dependentes</li>
+        <li>✅ Assistência 24h</li>
+      </ul>
+      <a href="#contato" class="btn-contratar" onclick="escolherPlano('Luxo')">Contratar</a>
+    </div>
+
+    <div class="card destaque">
+      <h3>Super Luxo</h3>
+      <div class="preco">R$ 100,00<small>/mês</small></div>
+      <div class="taxa">Taxa de Inscrição: R$ 100,00</div>
+      <ul>
+        <li>✅ <strong>KM ILIMITADO</strong></li>
+        <li>✅ Titular + 10 dependentes</li>
+        <li>✅ Assistência 24h</li>
+      </ul>
+      <a href="#contato" class="btn-contratar" onclick="escolherPlano('Super Luxo')">Contratar</a>
+    </div>
+  </div>
+
+  <div class="extras">
+    Disponibilizamos também serviços de tanatopraxia, formolização e cremação.<br>
+    <a href="https://wa.me/5575999081877?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20a%20tabela%20de%20pre%C3%A7os%20dos%20servi%C3%A7os." target="_blank" rel="noopener" class="btn-laranja" style="margin-top:14px;font-size:16px">CONSULTAR TABELA DE PREÇOS</a>
+  </div>
+</section>
+
+<!-- CREMAÇÃO -->
+<section class="cremacao" id="cremacao">
+  <div class="titulo">
+    <h2>Por que escolher a Cremação?</h2>
+    <div class="linha"></div>
+  </div>
+  <div class="grid-cremacao">
+    <div class="item-cremacao">
+      <h3>01. Flexibilidade Cerimonial</h3>
+      <p>A cremação oferece opções mais flexíveis para cerimônias, permitindo que as famílias organizem eventos de despedida de maneiras variadas.</p>
+    </div>
+    <div class="item-cremacao">
+      <h3>02. Custos Mais Baixos</h3>
+      <p>Em comparação com o sepultamento tradicional, a cremação muitas vezes é mais acessível financeiramente, sendo uma consideração para algumas pessoas.</p>
+    </div>
+    <div class="item-cremacao">
+      <h3>03. Impacto Ambiental</h3>
+      <p>Escolher a cremação é ter preocupação ambiental, visto que ela pode ser percebida como uma opção mais sustentável em relação ao uso de espaço para sepulturas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ESTRUTURA -->
+<section class="estrutura" id="estrutura">
+  <div class="titulo">
+    <h2>Nossa Estrutura</h2>
+    <p>Ambientes acolhedores para uma despedida com conforto e respeito.</p>
+    <div class="linha"></div>
+  </div>
+  <div class="grid-estrutura">
+    <div class="sala">
+      <img src="sala01.jpeg" alt="Sala 01 - Aconchego da Esperança">
+      <div><span>SALA 01</span><h3>Aconchego da Esperança</h3></div>
+    </div>
+    <div class="sala">
+      <img src="sala02.jpeg" alt="Sala 02 - Recanto da Lembrança">
+      <div><span>SALA 02</span><h3>Recanto da Lembrança</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="depoimentos" id="depoimentos">
+  <div class="titulo">
+    <h2>O que nossos clientes dizem</h2>
+    <p>Famílias que confiam no Plano Esperança.</p>
+    <div class="linha"></div>
+  </div>
+  <!-- TROQUE os textos e nomes abaixo pelos depoimentos reais (com autorização dos clientes) -->
+  <div class="grid-dep">
+    <div class="dep">
+      <div class="estrelas">★★★★★</div>
+      <p>“Num momento tão difícil, fomos atendidos com muito carinho e rapidez. Deus abençoe toda a equipe.”</p>
+      <div class="autor"><div class="avatar">M</div><div><strong>Maria S.</strong><span>Paulo Afonso - BA</span></div></div>
+    </div>
+    <div class="dep">
+      <div class="estrelas">★★★★★</div>
+      <p>“O plano cabe no bolso e dá uma segurança enorme para a família toda. Recomendo!”</p>
+      <div class="autor"><div class="avatar">J</div><div><strong>José R.</strong><span>Paulo Afonso - BA</span></div></div>
+    </div>
+    <div class="dep">
+      <div class="estrelas">★★★★★</div>
+      <p>“Atendimento 24 horas de verdade. Ligamos de madrugada e já fomos atendidos na hora.”</p>
+      <div class="autor"><div class="avatar">A</div><div><strong>Ana P.</strong><span>Glória - BA</span></div></div>
+    </div>
+    <div class="dep">
+      <div class="estrelas">★★★★★</div>
+      <p>“A estrutura é linda e muito acolhedora. As salas são confortáveis e tudo foi feito com muito respeito.”</p>
+      <div class="autor"><div class="avatar">C</div><div><strong>Carlos M.</strong><span>Paulo Afonso - BA</span></div></div>
+    </div>
+    <div class="dep">
+      <div class="estrelas">★★★★★</div>
+      <p>“Incluí meus pais e meus filhos no mesmo plano. Pagando pouco, toda a família fica protegida.”</p>
+      <div class="autor"><div class="avatar">L</div><div><strong>Luciana F.</strong><span>Rodelas - BA</span></div></div>
+    </div>
+    <div class="dep">
+      <div class="estrelas">★★★★★</div>
+      <p>“Escolhemos a cremação e fomos muito bem orientados em cada etapa. Gratidão pelo cuidado.”</p>
+      <div class="autor"><div class="avatar">R</div><div><strong>Roberto L.</strong><span>Paulo Afonso - BA</span></div></div>
+    </div>
+    <div class="dep">
+      <div class="estrelas">★★★★★</div>
+      <p>“Equipe educada, atenciosa e sem burocracia. Fez toda a diferença para nós.”</p>
+      <div class="autor"><div class="avatar">S</div><div><strong>Sandra B.</strong><span>Chorrochó - BA</span></div></div>
+    </div>
+    <div class="dep">
+      <div class="estrelas">★★★★★</div>
+      <p>“Melhor custo-benefício da região. O representante veio até minha casa e explicou tudo com paciência.”</p>
+      <div class="autor"><div class="avatar">E</div><div><strong>Edson T.</strong><span>Paulo Afonso - BA</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO / FORMULÁRIO -->
+<section class="contato" id="contato">
+  <div class="contato-grid">
+    <div class="contato-info">
+      <h2>Solicite um Representante</h2>
+      <p>Preencha o formulário e nossa equipe vai até você, sem compromisso. Seus dados vão direto para o nosso atendimento no WhatsApp.</p>
+      <div class="linha-c">📍 Av. Otaviano Leandro de Moraes, nº 429, Centro - Paulo Afonso - BA</div>
+      <div class="linha-c">📞 <a href="tel:+557532810365">(75) 3281-0365</a></div>
+      <div class="linha-c">💬 <a href="https://wa.me/5575999081877" target="_blank" rel="noopener">(75) 99908-1877</a></div>
+      <div class="linha-c">💬 <a href="https://wa.me/5575988118239" target="_blank" rel="noopener">(75) 98811-8239</a></div>
+    </div>
+
+    <form id="formRep" onsubmit="enviarWhats(event)">
+      <h3>📋 Quero falar com um representante</h3>
+
+      <label for="nome">Nome completo *</label>
+      <input type="text" id="nome" placeholder="Seu nome" required>
+
+      <label for="telefone">Seu telefone / WhatsApp *</label>
+      <input type="tel" id="telefone" placeholder="(75) 99999-9999" required>
+
+      <label for="endereco">Endereço (rua e número) *</label>
+      <input type="text" id="endereco" placeholder="Ex.: Rua das Flores, 123" required>
+
+      <label for="bairro">Bairro / Cidade *</label>
+      <input type="text" id="bairro" placeholder="Ex.: Centro - Paulo Afonso" required>
+
+      <label for="plano">Plano de interesse</label>
+      <select id="plano">
+        <option value="Ainda não sei, quero conhecer">Ainda não sei, quero conhecer</option>
+        <option value="Simples">Simples - R$ 35,00</option>
+        <option value="Básico">Básico - R$ 45,00</option>
+        <option value="Luxo">Luxo - R$ 70,00</option>
+        <option value="Super Luxo">Super Luxo - R$ 100,00</option>
+      </select>
+
+      <label for="msg">Observação (opcional)</label>
+      <textarea id="msg" rows="3" placeholder="Melhor horário para a visita, dúvidas..."></textarea>
+
+      <button type="submit" class="btn-laranja">💬 ENVIAR PARA O WHATSAPP</button>
+      <div class="aviso">Ao clicar, o WhatsApp abrirá com sua solicitação pronta para enviar.</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <img class="logo-rodape" src="logo.jpeg" alt="Memorial Esperança" onerror="this.style.display='none'">
+  <p><strong>Central de Atendimento:</strong> Av. Otaviano Leandro de Moraes, n° 429, Centro - Paulo Afonso - BA</p>
+  <p><strong>Telefones:</strong> (75) 3281-0365 | <a href="https://wa.me/5575999081877" target="_blank" rel="noopener">(75) 99908-1877</a> | <a href="https://wa.me/5575988118239" target="_blank" rel="noopener">(75) 98811-8239</a></p>
+  <p>Plano de Assistência Funerária Esperança • Memorial Esperança Cemitério</p>
+  <p class="copy">© 2026 Plano Esperança. Todos os direitos reservados.</p>
+</footer>
+
+<a href="https://wa.me/5575999081877?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Plano%20Esperan%C3%A7a." class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script>
+  // Número do atendimento que recebe as solicitações (formato internacional, sem + ou espaços)
+  var NUMERO_WHATSAPP = "5575999081877";
+
+  function escolherPlano(nome){
+    var s = document.getElementById("plano");
+    if(s){ s.value = nome; }
+  }
+
+  function enviarWhats(e){
+    e.preventDefault();
+    var nome = document.getElementById("nome").value.trim();
+    var tel = document.getElementById("telefone").value.trim();
+    var end = document.getElementById("endereco").value.trim();
+    var bairro = document.getElementById("bairro").value.trim();
+    var plano = document.getElementById("plano").value;
+    var msg = document.getElementById("msg").value.trim();
+
+    var texto = "*SOLICITAÇÃO DE REPRESENTANTE - PLANO ESPERANÇA*\n\n" +
+      "👤 *Nome:* " + nome + "\n" +
+      "📱 *Telefone:* " + tel + "\n" +
+      "📍 *Endereço:* " + end + "\n" +
+      "🏘️ *Bairro/Cidade:* " + bairro + "\n" +
+      "📋 *Plano de interesse:* " + plano + "\n" +
+      (msg ? "💬 *Observação:* " + msg + "\n" : "") +
+      "\nGostaria que um representante entrasse em contato / viesse até mim.";
+
+    var url = "https://wa.me/" + NUMERO_WHATSAPP + "?text=" + encodeURIComponent(texto);
+    window.open(url, "_blank");
+  }
+</script>
+
+</body>
+</html>
